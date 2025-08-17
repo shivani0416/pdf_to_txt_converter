@@ -74,7 +74,7 @@
 </head>
 <body>
 
-<div class="logo"></div> <!-- You can replace this with an <img> tag to add your actual logo -->
+<div class="logo"></div>
 
 <div class="container">
   <h1>PDF to Text Converter</h1>
@@ -88,6 +88,11 @@
     <h2>Extracted Text</h2>
     <pre id="textContent">{{ extracted_text }}</pre>
     <button onclick="downloadText()">Download as .txt</button>
+  {% endif %}
+
+  {% if summary %}
+    <h2>Summary</h2>
+    <pre>{{ summary }}</pre>
   {% endif %}
 </div>
 
